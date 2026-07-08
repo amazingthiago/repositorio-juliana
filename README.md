@@ -2,7 +2,7 @@
 
 > Repositório pessoal de **Juliana** no ecossistema Claude da Amazing PRO — memória de trabalho, melhores práticas e contexto acumulado ao longo do uso diário.
 
-**Padrão:** Amazing PRO Personal Memory v1.1 | **Última atualização:** 08 de julho de 2026
+**Padrão:** Amazing PRO Personal Memory v1.2 | **Última atualização:** 08 de julho de 2026
 
 ---
 
@@ -24,6 +24,66 @@ Ele é **irmão** do repositório mestre [`amazing-skills`](https://github.com/a
 | **Fonte da verdade para** | Como fazer (framework, processo, voz) | Quem, o quê, quando, como Juliana trabalha |
 
 **Regra de ouro:** se a informação é sobre *método* (como a Amazing PRO faz X), ela pertence ao `amazing-skills`. Se é sobre *contexto pessoal* (quem Juliana conversa, quais projetos toca, como prefere trabalhar), pertence aqui.
+
+---
+
+## Onboarding — primeira personalização
+
+Repositório novo ou ainda com os placeholders do template? Comece por aqui.
+
+**1. Instruções do Claude** (uma vez, em Configurações → Preferências):
+```
+Use por MCP direto do GitHub o meu repositório de memória pessoal:
+https://github.com/amazingthiago/repositorio-juliana
+
+Leia o CLAUDE.md desse repositório para ter contexto sobre mim.
+Nunca altere nenhum outro repositório do GitHub sem eu pedir isso
+explicitamente nesta conversa.
+```
+
+**2. Disparar a entrevista** — nova conversa, cole:
+```
+Vamos personalizar meu repositório de memória pessoal:
+https://github.com/amazingthiago/repositorio-juliana
+
+Acesse o repositório e leia o arquivo _meta/ONBOARDING.md — ele tem o
+roteiro da entrevista de personalização. Conduza a entrevista com base
+nele, um bloco de perguntas por vez, no ritmo de uma conversa normal
+(não me jogue tudo de uma vez).
+
+Ao final de cada bloco, já vá salvando o que fizer sentido diretamente
+no repositório (commit direto, não precisa pedir confirmação a cada
+arquivo). A única regra é: não altere nenhum outro repositório sem eu
+pedir explicitamente.
+
+Quando terminar, me dê um resumo do que foi salvo e as instruções de
+como usar o repositório no dia a dia.
+```
+
+**3. Responder a entrevista** — conversa normal. Seja direto no bloco sobre estilo de comunicação — é o que mais muda a experiência no dia a dia.
+
+**4. [Opcional] Já tem conversas longas e produtivas com o Claude?** Funda preferências de lá também, em vez de recomeçar do zero. Na conversa antiga, cole:
+```
+Extraia minhas preferências, padrões e modelos de operação desta
+conversa. Remova os vieses que podem atrapalhar a produtividade ou a
+qualidade da resposta (elogios desnecessários, hedging, respostas
+mais longas do que o necessário, e qualquer outro padrão que você
+perceber que não me serve).
+```
+Depois que o Claude responder, cole:
+```
+Agora acesse meu repositório: https://github.com/amazingthiago/repositorio-juliana
+
+Leia o _meta/ONBOARDING.md e o CLAUDE.md atual para entender a
+governança do repositório, e funda essas preferências que você acabou
+de extrair com o que já está salvo — sem duplicar e sem apagar nada
+que já esteja lá, a menos que entre em contradição direta (nesse caso,
+a informação mais recente vence).
+
+Não altere nenhum outro repositório.
+```
+
+Roteiro completo da entrevista: `_meta/ONBOARDING.md`.
 
 ---
 
@@ -49,7 +109,8 @@ repositorio-juliana/
 │   └── contexto/
 │       └── empresa.md          (contexto institucional Amazing PRO)
 └── _meta/
-    └── CHANGELOG.md            (histórico de mudanças estruturais deste repositório)
+    ├── CHANGELOG.md            (histórico de mudanças estruturais deste repositório)
+    └── ONBOARDING.md           (roteiro da entrevista de personalização, para o Claude seguir)
 ```
 
 ---
@@ -103,7 +164,7 @@ Para isso, marque o trecho com uma seção `## 🔒 Privado`:
 ## 🔒 Privado
 
 [Conteúdo que o Claude pode usar para entender contexto, mas nunca deve citar
-literalmente, exportar, ou repetir para quem não seja a própria Juliana.]
+literalmente, exportar, ou repetir para quem não seja o próprio Juliana.]
 ```
 
 **Regra para o Claude:** conteúdo sob `## 🔒 Privado` informa o raciocínio, mas nunca aparece verbatim na resposta — nem em resumos, nem em documentos gerados, nem repassado a outra pessoa. Se uma tarefa exige compartilhar algo que só existe nessa seção, pergunte a Juliana antes de usar.
@@ -113,7 +174,7 @@ literalmente, exportar, ou repetir para quem não seja a própria Juliana.]
 ## Como manter atualizado
 
 - **Toda sexta-feira (ou ao fim de um ciclo de trabalho):** revisar `CLAUDE.md` — o que ficou obsoleto sai, o que virou frequente entra.
-- **Ao final de uma sessão de trabalho substantiva:** antes de encerrar, o Claude oferece proativamente um resumo rápido do que valeria registrar (pessoa nova mencionada, decisão tomada, prática que se repetiu) — não depende só do gatilho "lembra disso" partir de Juliana. Ela aceita, ajusta ou dispensa a sugestão.
+- **Ao final de uma sessão de trabalho substantiva:** antes de encerrar, o Claude oferece proativamente um resumo rápido do que valeria registrar (pessoa nova mencionada, decisão tomada, prática que se repetiu) — não depende só do gatilho "lembra disso" partir de Juliana. Juliana aceita, ajusta ou dispensa a sugestão.
 - **Ao aprender algo que quer repetir:** criar um arquivo em `melhores-praticas/` a partir do `_template.md`. Não deixar isso só na conversa — se não vira arquivo, se perde.
 - **Ao mudar a estrutura deste repositório** (nova pasta, nova regra, nova convenção): registrar em `_meta/CHANGELOG.md`.
 - **Nunca inflar o `CLAUDE.md`** — se uma informação parece "importante demais para não estar lá", provavelmente é porque virou uma preferência de trabalho (vai pro CLAUDE.md) ou porque merece virar uma prática documentada (vai pra `melhores-praticas/`). Detalhe e histórico sempre vão para `memory/`.

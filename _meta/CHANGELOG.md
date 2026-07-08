@@ -2,6 +2,12 @@
 
 Histórico de mudanças estruturais deste repositório. Não é changelog de conteúdo do dia a dia (isso fica implícito nos commits) — é para marcar decisões de organização.
 
+## v1.2 — 08 de julho de 2026
+
+- **Onboarding formalizado:** novo arquivo `_meta/ONBOARDING.md` com o roteiro completo da entrevista de personalização (identidade, estilo de comunicação, pessoas, projetos, práticas de trabalho, glossário) que o Claude segue quando Juliana pede para "personalizar" ou "preparar" o repositório.
+- Nova seção "Onboarding — primeira personalização" no `README.md`, com os 4 passos prontos para copiar (instruções do Claude, prompt de disparo da entrevista, e fluxo opcional de fusão de preferências extraídas de conversas antigas).
+- `CLAUDE.md` aponta para o onboarding quando a seção "Quem sou" ainda está com placeholder.
+
 ## v1.1 — 08 de julho de 2026
 
 Inspirado numa avaliação do `claude-mem` (plugin de memória de sessão para Claude Code) — não a ferramenta em si (infraestrutura própria, não fazia sentido aqui), mas 3 princípios de arquitetura que o padrão v1.0 ainda não tinha:
@@ -10,6 +16,8 @@ Inspirado numa avaliação do `claude-mem` (plugin de memória de sessão para C
 - **Convenção de privacidade** (`## 🔒 Privado`) nos templates de pessoa e projeto — conteúdo sensível que informa o Claude sem nunca ser citado literalmente, exportado ou repassado.
 - **Seção "Linha do tempo"** (opcional) nos templates de pessoa e projeto — para reconstituir histórico cronológico quando relevante, não só o estado atual.
 - **Prática de encerramento de sessão** registrada em `CLAUDE.md` e `README.md`: ao final de trabalho substantivo, o Claude oferece proativamente um resumo do que vale registrar, em vez de depender só do gatilho "lembra disso" partir da pessoa.
+
+Mesma atualização aplicada em conjunto a todos os repositórios pessoais do time (padrão Amazing PRO Personal Memory), a partir do que foi validado primeiro em `repositorio-juliana`.
 
 ## v1.0 — 07 de julho de 2026
 
